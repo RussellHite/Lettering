@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="Lettering.widget.Lettering" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+  <name>Lettering</name>
+  <description>Adding radical web typography to Mendix</description>
+
+  <icon></icon>
+
+  <properties>
+        <property key="className" type="string" required="true" defaultValue="lettering">
+            <caption>Class name</caption>
+            <category>Behavior</category>
+            <description>The class name to use for the transformation.</description>
+        </property>
+        <property key="splitOn" type="enumeration" defaultValue="chars">
+            <caption>Split on</caption>
+            <category>Behavior</category>
+            <description>Split on: characters, words, lines.</description>
+            <enumerationValues>
+                <enumerationValue key="chars">Characters</enumerationValue>
+                <enumerationValue key="words">Words</enumerationValue>
+                <enumerationValue key="lines">Lines</enumerationValue>
+            </enumerationValues>
+        </property>
+	</properties>
+</widget>
+
