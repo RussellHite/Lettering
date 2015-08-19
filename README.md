@@ -1,14 +1,6 @@
-# App Store Widget Boilerplate
+# Lettering Widget
 
-This boilerplate gives you all you need to start a new custom widget for Mendix 5.6.0 and up.
-
-The boilerplate contains:
-
-- Directory structure.
-- Readme.md file.
-- License.
-- Javascript source.
-- XSD for package.xml, to configure properties of the widget, visible inside the Mendix business modeler.
+Take ultimate control over your type.
 
 ## Contributing
 
@@ -16,70 +8,50 @@ For more information on contributing to this repository visit [Contributing to a
 
 ## Typical usage scenario
 
-Use this template to start building a widget for Mendix 5.
-Alter this README.md file and describe what your widget does.
+Use this to have complete control over every letter, word or line in any headline.
  
-## Description
+## Description/Demo
 
-The javascript inside the widget has examples of:
+Add your widget to the page. Within the widget's properties choose a class name that you will also apply to your headline. Select how you want your headline to split up by character, words or line. Apply same class to headline. On running the Modeler the code of the headline will appear as:
 
-- Using CSS within a Widget.
-- Using templating.
-- Loading external library's.
-- DOM manipulation.
-- Event attaching.
-- Loading data.
-- Executing microflow and sending data.
-- Working with the context object (The object that is send by a contextview , for instance a dataview).
+`<h2 class="mx-name-label5 lettering" data-mendix-id="236" aria-label="Dashboard Actions">
+	<span class="char1" aria-hidden="true">D</span>
+	<span class="char2" aria-hidden="true">a</span>
+	<span class="char3" aria-hidden="true">s</span>
+	<span class="char4" aria-hidden="true">h</span>
+	<span class="char5" aria-hidden="true">b</span>
+	<span class="char6" aria-hidden="true">o</span>
+	<span class="char7" aria-hidden="true">a</span>
+	<span class="char8" aria-hidden="true">r</span>
+	<span class="char9" aria-hidden="true">d</span>
+</h2>`
 
-### Dojo AMD module list
+Now the text is easy to manipulate in your CSS. For example:
 
-The javascript contains a really extensive list of modules that may be used to build the widget. It is best to reduce this list to what is actually used. Plugins like jsLint for Notepad++ will show unused objects. **Be sure to keep the module name array and the parameter list of the anonymous function below the module list in sync!**
+`.lettering{
+  font-size:50px;
+  font-weight:bold;
 
-The following modules are necessary for all widgets:
+}
+.lettering span{
+  position:relative;
+  display:inline-block;
+}
 
-- dojo/_base/declare
-- mxui/widget/_WidgetBase
-- dijit/_Widget
-
-If your widget does not use an HTML template:
-
-- Remove dijit/_TemplatedMixin from the module list
-- Remove _Templated from the parameter list of the anonymous function below the module list
-- Remove _Templated from the parameter list of the declare call
-- Remove the templates folder
-
-If your widget does not need jQuery:
-
-- Remove WidgetName/widget/lib/jquery from the module list
-- Remove _jQuery from the parameter list of the anonymous function below the module list
-- Remove _jQuery from the parameter list of the declare call
-- Remove jquery.js from src\WidgetName\widget\lib\ Or remove the lib folder if you don't include external libraries in the widget.
-
-## Migrating a widget to Dojo AMD
-
-A widget that uses Dojo AMD may not refer to functions like *dojo.query* etc. All necessary modules must be declared on the module list at the top of the source.
-
-Replacing all 'old' Dojo calls in an existing source can be a bit of a pain.
-
-Here is a list of commonly used functions and their AMD counterpart:
-
-Old | New
----------- |---------- 
-mxui.dom              | domMx
-dojo.byId             | dom.byId
-dojo.query            | domQuery
-dojo.forEach          | dojoArray.forEach
-dojo.hitch            | lang.hitch
-dojo.addClass         | domClass.add
-dojo.removeClass      | domClass.remove
-dojo.hasClass         | domClass.contains
-dojo.replaceClass     | domClass.replace
-dojo.empty            | domConstruct.empty
-dojo.place            | domConstruct.place 
-dojo.on               | on
-dojo.window           | win
+.lettering span:nth-child(odd){
+  color:#58B4D4;
+  top: 3px;
+  transform: rotate(3deg);
   
-Do not use domQuery.query! Just domQuery
+}
+.lettering span:nth-child(even){
+  color:#ABE0F3;
+  transform: rotate(-3deg);
+} `
 
-The referenced modules are in the module list of the boilerplate javascript
+### Gothchas
+
+There are a few style settings to take note of when using Lettering.
+
+If you want to adjust the postioning of the letters via, top, bottom, left or right properties set the all span's position to `relative`.
+For use of the transform property set the all span's display to `inline-block`
