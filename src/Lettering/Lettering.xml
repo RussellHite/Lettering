@@ -3,7 +3,7 @@
   <name>Lettering</name>
   <description>Adding radical web typography to Mendix</description>
 
-  <icon></icon>
+  <icon>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAKlBMVEUvPEVGUENaYkBscj6KjjiYmzampzOyszDKyirV1Cfg3yTr6SD18h3//BnvW1xzAAAAP0lEQVR42s2NOQoAIADDvO/8/7uCuNlFcDBjQ4n5hQFF7Q5ISgQgKJEBq0SFftX279rtvr04X3GLItqLZD5gAm5AAzwED5VUAAAAAElFTkSuQmCC</icon>
 
   <properties>
         <property key="className" type="string" required="true" defaultValue="lettering">

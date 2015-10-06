@@ -13,8 +13,8 @@ Use this to have complete control over every letter, word or line in any headlin
 ## Description/Demo
 
 Add your widget to the page. Within the widget's properties choose a class name that you will also apply to your headline. Select how you want your headline to split up by character, words or line. Apply same class to headline. On running the Modeler the code of the headline will appear as:
-
-`<h2 class="mx-name-label5 lettering" data-mendix-id="236" aria-label="Dashboard Actions">
+```
+<h2 class="mx-name-label5 lettering" data-mendix-id="236" aria-label="Dashboard Actions">
 	<span class="char1" aria-hidden="true">D</span>
 	<span class="char2" aria-hidden="true">a</span>
 	<span class="char3" aria-hidden="true">s</span>
@@ -24,11 +24,13 @@ Add your widget to the page. Within the widget's properties choose a class name 
 	<span class="char7" aria-hidden="true">a</span>
 	<span class="char8" aria-hidden="true">r</span>
 	<span class="char9" aria-hidden="true">d</span>
-</h2>`
+</h2>
+```
 
 Now the text is easy to manipulate in your CSS. For example:
 
-`.lettering{
+```
+.lettering{
   font-size:50px;
   font-weight:bold;
 
@@ -47,7 +49,8 @@ Now the text is easy to manipulate in your CSS. For example:
 .lettering span:nth-child(even){
   color:#ABE0F3;
   transform: rotate(-3deg);
-} `
+}
+```
 
 ### Gothchas
 

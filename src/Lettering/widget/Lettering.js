@@ -6,9 +6,9 @@
     ========================
 
     @file      : Lettering.js
-    @version   : 0.1
-    @author    : Chad Evans
-    @date      : Tue, 18 Aug 2015
+    @version   : 1.0
+    @author    : Chad Evans, Russel Hite
+    @date      : 19 Aug 2015
     @copyright : 2015, Mendix B.v.
     @license   : Apache v2
 
@@ -45,12 +45,12 @@ define([
 
         // dijit._WidgetBase.postCreate is called after constructing the widget. Implement to do extra setup work.
         postCreate: function () {
-            console.log(this.id + '.postCreate');
+            //console.log(this.id + '.postCreate');
         },
 
         // mxui.widget._WidgetBase.update is called when context is changed or initialized. Implement to re-render and / or fetch data.
         update: function (obj, callback) {
-            console.log(this.id + '.update');
+            //console.log(this.id + '.update');
 
             if (this.splitOn === "chars") {
                 $("." + this.className).lettering();
